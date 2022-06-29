@@ -5,27 +5,25 @@ title: Develop Process Automation
 The custom development of Process Automation is restricted to four areas:
 
 * Communicating with external systems from an application.
-* Extend the Digital Workspace interface for end users.
-* Develop a custom user interface using the Application Development Framework (ADF).
+* Extending the Digital Workspace interface for end users.
+* Developing a custom user interface using the Application Development Framework (ADF).
 * Implementing custom form fields.
 
 ## External systems communication
 
-Communication with an external system should use the [REST connector]({% link process-automation/latest/model/connectors/rest.md %}) or the [Lambda connector]({% link process-automation/latest/model/connectors/aws.md %}#lambda).
+Communication with an external system should use the [REST connector]({% link process-automation/latest/model/connectors/rest.md %}) or the [Lambda connector]({% link process-automation/latest/model/connectors/aws.md %}#lambda). Both connectors can send and return JSON payloads from a process. The REST connector can also be configured as a [trigger]({% link process-automation/latest/model/triggers.md %}#webhooks) for webhooks.
 
-> **Important**: The REST service and the AWS Lambda account and function need to be hosted outside of the Alfresco hosted environment.
-
-Both connectors can send and return JSON payloads from a process. The REST connector can also be configured as a [trigger]({% link process-automation/latest/model/triggers.md %}#webhooks) for webhooks.
+> **Important**: The REST service and the AWS Lambda account must be hosted outside of the Alfresco hosted environment.
 
 ## Extend the Digital Workspace
 
-The default [end user interface]({% link process-automation/latest/model/interfaces.md %}) provided with Process Automation is the [Alfresco Digital Workspace]({% link digital-workspace/latest/index.md %}).
+The default [end user interface]({% link process-automation/latest/model/interfaces.md %}) provided with Process Automation is [Alfresco Digital Workspace]({% link digital-workspace/latest/index.md %}).
 
-> **Note**: The Digital Workspace can be extended to customize the branding and components. If your requirement is to customize large parts of the Digital Workspace then consider [developing a custom user interface](#develop-a-custom-user-interface) instead.
+> **Note**: The Digital Workspace can be extended to customize your branding and components. If your requirements are to customize large parts of the Digital Workspace then consider [developing a custom user interface](#develop-a-custom-user-interface) instead.
 
 ### Setup
 
-To start developing Digital Workspace customizations:
+To start developing and customizing the Digital Workspace:
 
 1. Request the source code from [Support](https://myalfresco.force.com/support/){:target="_blank"}.
 
@@ -57,15 +55,15 @@ To start developing Digital Workspace customizations:
     | Property | Description |
     | -------- | ----------- |
     | API_HOST | The API host for the environment in the format `https://alfresco.com`. |
-    | API_CONTENT_HOST | The API host for the content services in the format `https://alfresco.com`. |
-    | API_PROCESS_HOST | The API host for the process services in the format `https://alfresco.com`. |
+    | API_CONTENT_HOST | The API host for Content Services in the format `https://alfresco.com`. |
+    | API_PROCESS_HOST | The API host for Process Services in the format `https://alfresco.com`. |
     | OAUTH_HOST | The authentication host in the format `https://alfresco.com/auth/realms/alfresco`. |
     | IDENTITY_HOST | The identity service host in the format `https://alfresco.com/auth/realms/alfresco`. |
     | APP_CONFIG_APPS_DEPLOYED | The name of the deployed application to extend the Digital Workspace against. The name is set when the application is deployed, for example `[{"name": "invoice-approval-application"}]`. |
 
 5. Run the following command from the root of your local Digital Workspace: `npm run start content-en-cloud`.
 
-6. Your local Digital Workspace is now connected to your hosted Process Automation application and can be extended, tested and debugged.
+Your local Digital Workspace is now connected to your hosted Process Automation application and can be extended, tested, and debugged.
 
 ### Develop
 
@@ -142,9 +140,9 @@ The Yeoman generator can be used to develop custom user interfaces for Process A
     },
     ```
 
-5. Add the property `"alfresco-deployed-apps"` to the `app.config.json` with the name of the deployed application you are developing an interface for. For example, `"alfresco-deployed-apps": [{"name":"invoice-approval-application"}]`.
+5. Add the property `alfresco-deployed-apps` to the `app.config.json` file  with the name of the deployed application you are developing an interface for. For example, `alfresco-deployed-apps: [{"name":"invoice-approval-application"}]`.
 
-6. To develop the interface locally, CORS will need to be bypassed. Edit the `proxy.conf.js` replacing the `{hostname}` and `{realm}` with those relevant to your environment and realm:
+6. To develop the interface locally you must bypass CORS. Edit the `proxy.conf.js` file by replacing the `{hostname}` and `{realm}` with those relevant to your environment and realm:
 
     ```js
     module.exports = {
@@ -187,7 +185,7 @@ The Yeoman generator can be used to develop custom user interfaces for Process A
 
 There are a set of [content components](https://www.alfresco.com/abn/adf/docs/content-services/){:target="_blank"} and a set of [process components](https://www.alfresco.com/abn/adf/docs/process-services-cloud/){:target="_blank"} that can be used to develop the custom user interface with. The content components can only be used if you selected the option **Content and Process Services with Activiti** when generating the application.
 
-> **Note**: Process Automation uses the Process Services **Cloud** components.
+> **Note**: Process Automation uses the Process Services Cloud components.
 
 ### Upload {#custom-upload}
 
@@ -202,14 +200,14 @@ Once the custom interface has been fully developed and tested it can be deployed
     * A link to the source code in S3.
     * The name of the application to update 
 
-        > **Note**: This should match what is configured in the `app.config.json` for the interface.
+        > **Note**: This should match what is configured in the `app.config.json` file for the interface.
 
     * The environment the application is deployed in.
     * When the application should be updated with the new interface.
 
 ## Custom form fields
 
-To include custom form fields within a form, the [form field customizations](https://www.alfresco.com/abn/adf/docs/user-guide/aae-extensions/){:target="_blank"} must be included in the [customization of Digital Workspace](#extend-the-digital-workspace) or the [development of a custom user interface](#develop-a-custom-user-interface).
+To include custom form fields within a form, the [form field customizations](https://www.alfresco.com/abn/adf/docs/user-guide/extensibility/){:target="_blank"} must be included in the [customization of Digital Workspace](#extend-the-digital-workspace) or the [development of a custom user interface](#develop-a-custom-user-interface).
 
 > **Note**: The custom field can be [included in a form]({% link process-automation/latest/model/forms.md %}#custom-form-widgets) before the custom interface has been deployed.
 
@@ -223,7 +221,7 @@ You can clean up historical data by using specific keys as input paramaters.
 | `processDefinitionKeys` | *Optional.* A list of process definition keys to clean up. If omitted, all current process definitions are queried from the database and applied to delete the criteria. The default is `null`. |
 | `limitSize` | *Optional.* A parameter that specifies the delete query size limit for performance. The default is `1000` rows. |
 | `schemaPrefix` | *Optional.* A parameter that specifies the schema prefix, i.e. `public`. The default is an empty string. |
-| `async` | *Optional.* A parameter that specifies the job execution strategy via the task executor. The default is true. |
+| `async` | *Optional.* A parameter that specifies the job execution strategy via the task executor. The default is `true`. |
 
 For example:
 
