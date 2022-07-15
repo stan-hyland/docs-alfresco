@@ -124,6 +124,9 @@ integrations:
       - title: "Microsoft Teams"
         text: "Alfresco Collaboration Connector for Teams enable users within the Microsoft Teams Client to search for and share content in Alfresco Content Services."
         url: /microsoft-teams/latest/
+      - title: "Facebook"
+        text: "Alfresco Collaboration Connector for Facebook enable users within the Microsoft Teams Client to search for and share content in Alfresco Content Services."
+        url: /facebook/latest/
       - title: "Microsoft Outlook"
         text: "Alfresco Outlook Integration allows you to use email and repository management without having to leave Microsoft Outlook."
         url: /microsoft-outlook/latest/

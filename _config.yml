@@ -685,6 +685,23 @@ defaults:
       version: 1.0
       latest: true
 
+  # Alfresco Collaboration Connector for Facebook
+  - scope:
+      path: "facebook"
+    values:
+      layout: "docs"
+      product: "Alfresco Collaboration Connector for facebook"
+      location: "facebook"
+      toc: "facebook"
+      support: true
+      versions:
+        - 1.0
+  - scope:
+      path: "facebook/latest"
+    values:
+      version: 1.0
+      latest: true
+
 # Alfresco Office Services
   - scope:
       path: "microsoft-office"
