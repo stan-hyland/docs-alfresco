@@ -450,7 +450,7 @@ You can configure AWS KMS by adding the relevant properties to the global proper
 Alfresco supports server-side encryption for content stored in AWS S3. There are several encryption types that you can 
 configure to use with S3 Connector. These include AWS Managed Encryption, and AWS Key Management Service (KMS) Encryption.
 
->**Note:** S3 doesn't work with the [Alfresco Content Encryption]({% link content-services/latest/admin/content-stores.md %}#encrypted-content-store) module. When using the S3 Connector we recommend using AWS KMS.
+>**Note:** S3 doesn't work with the [Alfresco Content Encryption]({% link content-services/7.2/admin/content-stores.md %}#encrypted-content-store) module. When using the S3 Connector we recommend using AWS KMS.
 
 **AWS Key Management Service (KMS) Encryption**
 
@@ -522,7 +522,7 @@ Starting from version 3.1, the S3 Connector provides out-of-the-box content stor
 
 The repository subsystem approach allows a more flexible use of the S3 content store, even in conjunction with existing content stores. A subsystem can be started, stopped, and configured independently, and it has its own isolated Spring application context and configuration. The S3 subsystems belong to the `ContentStore` category, and have types `S3` or `S3OnPrem`.
 
-See the Alfresco Content Services documentation on [Subsystems]({% link content-services/latest/config/subsystems.md %}) for more.
+See the Alfresco Content Services documentation on [Subsystems]({% link content-services/7.2/config/subsystems.md %}) for more.
 
 **S3OnPrem content store subsystem**
 
@@ -814,7 +814,7 @@ init-method="init">
 This provides the subsystem properties where the `S3MultipleBuckets` subsystem declares default values for all the 
 properties it requires.
 
-See the Alfresco Content Services documentation on [Subsystem properties]({% link content-services/latest/config/subsystems.md %}#subsystem-properties) for more info.
+See the Alfresco Content Services documentation on [Subsystem properties]({% link content-services/7.2/config/subsystems.md %}#subsystem-properties) for more info.
 
 **Deleted content store support provided by the repository vs. managed by S3 capabilities**
 

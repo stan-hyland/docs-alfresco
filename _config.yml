@@ -18,14 +18,14 @@ defaults:
         - 6.1
         - 6.0
         - 5.2
+
   - scope:
-      path: "content-services/latest"
+      path: "content-services/7.2"
     values:
       version: 7.2
-      latest: true
       release: true
   - scope:
-      path: "content-services/latest/tutorial"
+      path: "content-services/7.2/tutorial"
     values:
       toc: "content-services-tutorial"
   - scope:
@@ -110,10 +110,10 @@ defaults:
         - 1.6
         - 1.5
   - scope:
-      path: "digital-workspace/latest"
+      path: "digital-workspace/7.2"
     values:
       version: 2.9
-      latest: true
+      7.2: true
   - scope:
       path: "digital-workspace/2.8"
     values:
@@ -168,10 +168,10 @@ defaults:
       location: "mobile-workspace"
       toc: "mobile-workspace"
   - scope:
-      path: "mobile-workspace/latest"
+      path: "mobile-workspace/7.2"
     values:
       version: 1.0
-      latest: true
+      7.2: true
 
 
 # Alfresco Google Drive
@@ -187,10 +187,10 @@ defaults:
         - 3.2
         - 3.1
   - scope:
-      path: "google-drive/latest"
+      path: "google-drive/7.2"
     values:
       version: 3.2
-      latest: true
+      7.2: true
   - scope:
       path: "google-drive/3.1"
     values:
@@ -211,10 +211,10 @@ defaults:
         - 2.0
         - 1.0
   - scope:
-      path: "aws-glacier/latest"
+      path: "aws-glacier/7.2"
     values:
       version: 2.2
-      latest: true
+      7.2: true
   - scope:
       path: "aws-glacier/2.1"
     values:
@@ -245,10 +245,10 @@ defaults:
         - 1.1
         - 1.0
   - scope:
-      path: "microsoft-azure/latest"
+      path: "microsoft-azure/7.2"
     values:
         version: 3.0
-        latest: true
+        7.2: true
   - scope:
       path: "microsoft-azure/2.1"
     values:
@@ -284,10 +284,10 @@ defaults:
         - 2.2
         - 2.1
   - scope:
-      path: "salesforce/latest"
+      path: "salesforce/7.2"
     values:
       version: 2.3
-      latest: true
+      7.2: true
   - scope:
       path: "salesforce/2.2"
     values:
@@ -318,12 +318,12 @@ defaults:
         - 1.1
         - 1.0
   - scope:
-      path: "identity-service/latest"
+      path: "identity-service/7.2"
     values:
       version: 1.8
-      latest: true
+      7.2: true
   - scope:
-      path: "identity-service/latest/tutorial"
+      path: "identity-service/7.2/tutorial"
     values:
       toc: "identity-service-tutorial"
   - scope:
@@ -398,7 +398,6 @@ defaults:
       toc: "desktop-sync"
       support: true
       versions:
-        - 1.12
         - 1.11
         - "1.10"
         - 1.9
@@ -407,14 +406,10 @@ defaults:
         - 1.6
         - 1.5
   - scope:
-      path: "desktop-sync/latest"
-    values:
-      version: 1.12
-      latest: true
-  - scope:
-      path: "desktop-sync/1.11"
+      path: "desktop-sync/7.2"
     values:
       version: 1.11
+      7.2: true
   - scope:
       path: "desktop-sync/1.10"
     values:
@@ -460,12 +455,12 @@ defaults:
         - 3.1
         - 3.0
   - scope:
-      path: "governance-services/latest"
+      path: "governance-services/7.2"
     values:
       version: 7.2
-      latest: true
+      7.2: true
   - scope:
-      path: "governance-services/latest/tutorial"
+      path: "governance-services/7.2/tutorial"
     values:
       toc: "governance-services-tutorial"
   - scope:
@@ -552,10 +547,10 @@ defaults:
         - "1.10"
         - 1.9
   - scope:
-      path: "process-services/latest"
+      path: "process-services/7.2"
     values:
       version: 2.3
-      latest: true
+      7.2: true
   - scope:
       path: "process-services/2.2"
     values:
@@ -594,15 +589,15 @@ defaults:
         - 2.3
         - 2.2
   - scope:
-      path: "transformation-engine/latest"
+      path: "transformation-engine/7.2"
     values:
       version: 2.3
-      latest: true
+      7.2: true
   - scope:
       path: "transformation-engine/2.2"
     values:
       version: 2.2
-      latest: true
+      7.2: true
 
 # Alfresco Content Connector for AWS S3
   - scope:
@@ -622,10 +617,10 @@ defaults:
         - 2.3
         - 2.2
   - scope:
-      path: "aws-s3/latest"
+      path: "aws-s3/7.2"
     values:
       version: 5.0
-      latest: true
+      7.2: true
   - scope:
       path: "aws-s3/4.1"
     values:
@@ -664,10 +659,10 @@ defaults:
         - 1.1
         - 1.0
   - scope:
-      path: "microsoft-365/latest"
+      path: "microsoft-365/7.2"
     values:
       version: 1.1
-      latest: true
+      7.2: true
   - scope:
       path: "microsoft-365/1.0"
     values:
@@ -683,17 +678,12 @@ defaults:
       toc: "microsoft-teams"
       support: true
       versions:
-        - 1.1
         - 1.0
   - scope:
-      path: "microsoft-teams/latest"
-    values:
-      version: 1.1
-      latest: true
-  - scope:
-      path: "microsoft-teams/1.0"
+      path: "microsoft-teams/7.2"
     values:
       version: 1.0
+      7.2: true
 
 # Alfresco Office Services
   - scope:
@@ -710,10 +700,10 @@ defaults:
         - 1.2
         - 1.1
   - scope:
-      path: "microsoft-office/latest"
+      path: "microsoft-office/7.2"
     values:
       version: 1.4
-      latest: true
+      7.2: true
   - scope:
       path: "microsoft-office/1.3"
     values:
@@ -744,10 +734,10 @@ defaults:
         - 1.1
         - 1.0
   - scope:
-      path: "transform-service/latest"
+      path: "transform-service/7.2"
     values:
       version: 1.5
-      latest: true
+      7.2: true
   - scope:
       path: "transform-service/1.4"
     values:
@@ -784,12 +774,12 @@ defaults:
         - 1.3
         - 1.2
   - scope:
-      path: "media-management/latest"
+      path: "media-management/7.2"
     values:
       version: 1.4
-      latest: true
+      7.2: true
   - scope:
-      path: "media-management/latest/tutorial"
+      path: "media-management/7.2/tutorial"
     values:
       toc: "media-management-tutorial"
   - scope:
@@ -822,10 +812,10 @@ defaults:
         - 1.2
         - 1.1
   - scope:
-      path: "saml-module/latest"
+      path: "saml-module/7.2"
     values:
       version: 1.2
-      latest: true
+      7.2: true
   - scope:
       path: "saml-module/1.1"
     values:
@@ -845,10 +835,10 @@ defaults:
         - 5.1
         - 5.0
   - scope:
-      path: "sap/latest"
+      path: "sap/7.2"
     values:
       version: 5.2
-      latest: true
+      7.2: true
   - scope:
       path: "sap/5.1"
     values:
@@ -872,10 +862,10 @@ defaults:
         - 1.1
         - 1.0
   - scope:
-      path: "sap-cloud/latest"
+      path: "sap-cloud/7.2"
     values:
       version: 1.2
-      latest: true
+      7.2: true
   - scope:
       path: "sap-cloud/1.1"
     values:
@@ -897,10 +887,10 @@ defaults:
       versions:
         - 2.2
   - scope:
-      path: "centera/latest"
+      path: "centera/7.2"
     values:
       version: 2.2
-      latest: true
+      7.2: true
 
 # Alfresco Process Automation
   - scope:
@@ -911,10 +901,10 @@ defaults:
       location: "process-automation"
       toc: "process-automation"
   - scope:
-      path: "process-automation/latest"
+      path: "process-automation/7.2"
     values:
       version: 1.0
-      latest: true
+      7.2: true
 
 
 # Alfresco Federation Services
@@ -931,10 +921,10 @@ defaults:
         - 1.1
         - 1.0
   - scope:
-      path: "federation-services/latest"
+      path: "federation-services/7.2"
     values:
       version: 2.0
-      latest: true
+      7.2: true
   - scope:
       path: "federation-services/1.1"
     values:
@@ -957,10 +947,10 @@ defaults:
         - 3.1
         - 3.0
   - scope:
-      path: "search-enterprise/latest"
+      path: "search-enterprise/7.2"
     values:
       version: 3.1
-      latest: true
+      7.2: true
   - scope:
       path: "search-enterprise/3.0"
     values:
@@ -980,10 +970,10 @@ defaults:
         - 1.4
         - 1.3
   - scope:
-      path: "search-services/latest"
+      path: "search-services/7.2"
     values:
       version: 2.0
-      latest: true
+      7.2: true
   - scope:
       path: "search-services/1.4"
     values:
@@ -1008,10 +998,10 @@ defaults:
         - 1.1
         - 1.0
   - scope:
-      path: "insight-engine/latest"
+      path: "insight-engine/7.2"
     values:
       version: 2.0
-      latest: true
+      7.2: true
   - scope:
       path: "insight-engine/1.4"
     values:
@@ -1044,10 +1034,10 @@ defaults:
         - 3.1
         - 3.0
   - scope:
-      path: "sync-service/latest"
+      path: "sync-service/7.2"
     values:
       version: 3.7
-      latest: true
+      7.2: true
   - scope:
       path: "sync-service/3.6"
     values:
@@ -1093,10 +1083,10 @@ defaults:
         - 1.1
         - 1.0
   - scope:
-      path: "intelligence-services/latest"
+      path: "intelligence-services/7.2"
     values:
       version: 1.4
-      latest: true
+      7.2: true
   - scope:
       path: "intelligence-services/1.3"
     values:
@@ -1123,10 +1113,10 @@ defaults:
       location: "support"
       toc: "support"
   - scope:
-      path: "support/latest"
+      path: "support/7.2"
     values:
       version: 1.0
-      latest: true
+      7.2: true
 
 # Alfresco Outlook Integration
   - scope:
@@ -1145,10 +1135,10 @@ defaults:
         - 2.5
         - 2.4
   - scope:
-      path: "microsoft-outlook/latest"
+      path: "microsoft-outlook/7.2"
     values:
       version: 2.9
-      latest: true
+      7.2: true
   - scope:
       path: "microsoft-outlook/2.8"
     values:
@@ -1179,10 +1169,10 @@ defaults:
       location: "content-mobile"
       toc: "content-mobile"
   - scope:
-      path: "content-mobile/latest"
+      path: "content-mobile/7.2"
     values:
       version: 1.0
-      latest: true
+      7.2: true
 
 sass:
   sass_dir: assets/include/scss

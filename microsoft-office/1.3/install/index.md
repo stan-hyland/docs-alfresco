@@ -18,7 +18,7 @@ Alfresco Office Services is part of the standard Alfresco installation, and soft
 * Office 365 Desktop Version for Mac v15 (through subscription)
 * Microsoft Office 2013 (32 or 64-bit)
 
-> **Note:** You must activate SSL when using Alfresco Office Services 1.2 or above. For more information, see [Configuring SSL]({% link content-services/latest/config/repository.md %}#ssl-repo).
+> **Note:** You must activate SSL when using Alfresco Office Services 1.2 or above. For more information, see [Configuring SSL]({% link content-services/7.2/config/repository.md %}#ssl-repo).
 
 ## Installing manually using the AMP file
 
@@ -26,7 +26,7 @@ To install manually into an existing Alfresco instance, you use the AOS AMP file
 
 > **Note:** If you deploy Content Services using containerized deployment, AOS is pre-installed in the Docker images.
 
-1. Install the AMP file `alfresco-aos-module-1.3.x.amp`. See [Installing an AMP]({% link content-services/latest/install/zip/amp.md %}) for information about installing an AMP file.
+1. Install the AMP file `alfresco-aos-module-1.3.x.amp`. See [Installing an AMP]({% link content-services/7.2/install/zip/amp.md %}) for information about installing an AMP file.
 
 2. Deploy the `_vti_bin.war` file.
 

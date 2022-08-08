@@ -16,7 +16,7 @@ This information is intended for developers or system administrator to create ap
 
 Alfresco offers a configurable mode for interacting with the SAML support. As an administrator, you can go to `http://localhost:8080/alfresco/s/enterprise/admin/admin-saml` to see the configured service providers that Alfresco exposes for interacting with various Alfresco functionality and components.
 
-In this example, we will discuss the REST API service provider in detail. This is the recommended service provider to use for interacting with the Alfresco Public REST APIs. For more information, see [REST API]({% link content-services/latest/develop/rest-api-guide/index.md %}).
+In this example, we will discuss the REST API service provider in detail. This is the recommended service provider to use for interacting with the Alfresco Public REST APIs. For more information, see [REST API]({% link content-services/7.2/develop/rest-api-guide/index.md %}).
 
 If configuring SAML using JMX beans, there are two additional properties that you can update in the JMX console. These properties are: `saml.sp.outcome.establishSession` and `saml.sp.outcome.provideTicket`. The use of the ticket based pattern is recommended to ensure authentication for the REST API. It is also recommended to avoid using session (cookie based), so `saml.sp.outcome.establishSession` should be set to `false`.
 
@@ -80,7 +80,7 @@ The initial REST API use cases are targeting clients that leverage CMIS, the Mob
 
     Pick up the ticket from the JSON response and close the browser. You now have an Alfresco ticket to talk to the REST APIs. For more information, see: `http://localhost:8080/alfresco/s/script/org/alfresco/repository/authentication/saml/service-provider/authenticate-response.post`.
 
-5. Using this Alfresco ticket, you can talk to any Alfresco API. For more information, see [Specifying user identity]({% link content-services/latest/tutorial/platform/web-scripts.md %}#specifying-user-identity).
+5. Using this Alfresco ticket, you can talk to any Alfresco API. For more information, see [Specifying user identity]({% link content-services/7.2/tutorial/platform/web-scripts.md %}#specifying-user-identity).
 
     You can pass the ticket as the `alf_ticket` query parameter in the URL. For example to get a list of sites use: `http://localhost:8080/alfresco/s/api/sites?alf_ticket=TICKET_97990b0a1c9152282b715a31bf365b41a3e21f01`
 
@@ -162,7 +162,7 @@ To enable CORS in the Alfresco server, do one of the following:
 
 There are a number of recommendations when running SAML for Alfresco behind a proxy.
 
-Make sure that the IdP is accessible to the client applications. At a minimum, configure the `alfresco.host`, `alfresco.port`, and `alfresco.protocol` properties to use the correct values of the proxy server. For more information, see [sysAdmin subsystem properties]({% link content-services/latest/config/repository.md %}#sysadmin-props). For deploying Alfresco with a reverse proxy, see [Deploying Alfresco with a different context path]({% link content-services/latest/config/repository.md %}#deploy-contextpath).
+Make sure that the IdP is accessible to the client applications. At a minimum, configure the `alfresco.host`, `alfresco.port`, and `alfresco.protocol` properties to use the correct values of the proxy server. For more information, see [sysAdmin subsystem properties]({% link content-services/7.2/config/repository.md %}#sysadmin-props). For deploying Alfresco with a reverse proxy, see [Deploying Alfresco with a different context path]({% link content-services/7.2/config/repository.md %}#deploy-contextpath).
 
 The limitations that apply to using web scripts with ticket authentication also applies to clustering for SAML usage. Make sure you have set up your load balancer correctly.
 

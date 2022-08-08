@@ -32,7 +32,7 @@ It then goes through various time and {% include tooltip.html word="events" text
 
 ## Further information
 
-If you're new to Alfresco then take a look at [Using Alfresco]({% link content-services/latest/using/index.md %}) to help you get started.
+If you're new to Alfresco then take a look at [Using Alfresco]({% link content-services/7.2/using/index.md %}) to help you get started.
 
 For more details on setting up and administering Governance Services see [Administering Records Management]({% link governance-services/3.2/admin/index.md %}).
 

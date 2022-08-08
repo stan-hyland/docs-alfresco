@@ -43,7 +43,7 @@ The Azure Connector is packaged as an Alfresco Module Package (AMP) file.
 
 3. Use the Module Management Tool (MMT) to install the AMP into the repository WAR (`alfresco.war`).
 
-    For more information see [Installing an Alfresco Module Package]({% link content-services/latest/install/zip/amp.md %}).
+    For more information see [Installing an Alfresco Module Package]({% link content-services/7.2/install/zip/amp.md %}).
 
     > **Note:** You must install the Azure Connector AMP using `-force`.
 
@@ -67,7 +67,7 @@ The Azure Connector is packaged as an Alfresco Module Package (AMP) file.
 
 3. Use the Module Management Tool (MMT) to install the AMP into the repository WAR (alfresco.war).
 
-    For more information, see [Using the Module Management Tool (MMT)]({% link content-services/latest/develop/extension-packaging.md %}#using-the-module-management-tool-mmt) and [Installing an Alfresco Module Package]({% link content-services/latest/install/zip/amp.md %}).
+    For more information, see [Using the Module Management Tool (MMT)]({% link content-services/7.2/develop/extension-packaging.md %}#using-the-module-management-tool-mmt) and [Installing an Alfresco Module Package]({% link content-services/7.2/install/zip/amp.md %}).
 
     > **Note:** You must install the Azure AMP using `-force`.
 
@@ -185,7 +185,7 @@ Use this information to upgrade the Azure Connector from a previous version for 
     java -jar bin/alfresco-mmt.jar uninstall  org_alfresco_integrations_AzureConnector tomcat/webapps/alfresco.war
     ```
 
-    For more information, see [Using the Module Management Tool (MMT)]({% link content-services/latest/develop/extension-packaging.md %}#using-the-module-management-tool-mmt) and [Uninstall an AMP file]({% link content-services/latest/install/zip/amp.md %}#uninstall-an-amp-file).
+    For more information, see [Using the Module Management Tool (MMT)]({% link content-services/7.2/develop/extension-packaging.md %}#using-the-module-management-tool-mmt) and [Uninstall an AMP file]({% link content-services/7.2/install/zip/amp.md %}#uninstall-an-amp-file).
 
 5. Navigate to the `amps` directory.
 
@@ -195,7 +195,7 @@ Use this information to upgrade the Azure Connector from a previous version for 
 
 8. Use the Module Management Tool (MMT) to install the AMP into the repository WAR (`alfresco.war`).
 
-    For more information, see [Using the Module Management Tool (MMT)]({% link content-services/latest/develop/extension-packaging.md %}#using-the-module-management-tool-mmt) and [Uninstall an AMP file]({% link content-services/latest/install/zip/amp.md %}#uninstall-an-amp-file).
+    For more information, see [Using the Module Management Tool (MMT)]({% link content-services/7.2/develop/extension-packaging.md %}#using-the-module-management-tool-mmt) and [Uninstall an AMP file]({% link content-services/7.2/install/zip/amp.md %}#uninstall-an-amp-file).
 
     > **Note:** You must install the Azure Connector AMP using `-force`.
 

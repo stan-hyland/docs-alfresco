@@ -28,11 +28,11 @@ When the checkbox is selected (since it's enabled by default), the folders are s
 
     1. Select **My Files** to expand the folder list in your **My Files** area of Alfresco Content Services.
 
-        You can navigate through the folder hierarchy and click the check box to select individual folders, or select ![]({% link desktop-sync/images/ico-ds-sync-fav.png %}) **My Files** to sync everything. See [My Files]({% link content-services/latest/using/content/index.md %}#my-files) for more.
+        You can navigate through the folder hierarchy and click the check box to select individual folders, or select ![]({% link desktop-sync/images/ico-ds-sync-fav.png %}) **My Files** to sync everything. See [My Files]({% link content-services/7.2/using/content/index.md %}#my-files) for more.
 
     2. Select **Shared Files** to sync all the files and folders under **Shared Files** in Alfresco.
 
-        You can navigate through the folder hierarchy and click the check box to select individual folders, or select ![]({% link desktop-sync/images/ico-ds-sync-fav.png %}) **Shared Files** to sync everything. See [Shared Files]({% link content-services/latest/using/content/index.md %}#shared-files) for more.
+        You can navigate through the folder hierarchy and click the check box to select individual folders, or select ![]({% link desktop-sync/images/ico-ds-sync-fav.png %}) **Shared Files** to sync everything. See [Shared Files]({% link content-services/7.2/using/content/index.md %}#shared-files) for more.
 
 2. Select ![]({% link desktop-sync/images/ico-ds-sync-fav.png %}) next to **Favorite Sites** to sync all your favorite sites.
 
@@ -116,11 +116,11 @@ When the checkbox is selected (since it's enabled by default), the folders are s
 
     1. Select **My Files** to expand the folder list in your **My Files** area of Alfresco Content Services.
 
-        You can navigate through the folder hierarchy and click the check box to select individual folders, or select ![]({% link desktop-sync/images/ico-ds-sync-fav.png %})**My Files** to sync everything. See [My Files]({% link content-services/latest/using/content/index.md %}#my-files) for more.
+        You can navigate through the folder hierarchy and click the check box to select individual folders, or select ![]({% link desktop-sync/images/ico-ds-sync-fav.png %})**My Files** to sync everything. See [My Files]({% link content-services/7.2/using/content/index.md %}#my-files) for more.
 
     2. Select **Shared Files** to expand the folder list in your **Shared Files** area of Alfresco Content Services.
 
-        You can navigate through the folder hierarchy and click the check box to select individual folders, or select ![]({% link desktop-sync/images/ico-ds-sync-fav.png %})**Shared Files** to sync everything. See [Shared Files]({% link content-services/latest/using/content/index.md %}#shared-files) for more.
+        You can navigate through the folder hierarchy and click the check box to select individual folders, or select ![]({% link desktop-sync/images/ico-ds-sync-fav.png %})**Shared Files** to sync everything. See [Shared Files]({% link content-services/7.2/using/content/index.md %}#shared-files) for more.
 
 2. Select **Sites** to expand the list of sites you are a member of in Alfresco Content Services, sites you have favorited, and sites with content that you have favorited.
 

@@ -227,7 +227,7 @@ If several files are **Checked Out**, you have the following options:
 
 ### Update password
 
-Desktop Sync doesn't allow you to change your password directly. However, if your [password changes]({% link content-services/latest/using/dashboard.md %}#changing-your-password) in Alfresco Share, you will see a notification in Desktop Sync asking you to update your password. Click **Update Password** to continue.
+Desktop Sync doesn't allow you to change your password directly. However, if your [password changes]({% link content-services/7.2/using/dashboard.md %}#changing-your-password) in Alfresco Share, you will see a notification in Desktop Sync asking you to update your password. Click **Update Password** to continue.
 
 ### Mac Finder context menu
 

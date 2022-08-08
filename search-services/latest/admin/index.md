@@ -27,7 +27,7 @@ You can only see the Admin Console if you're an administrator.
 
 To edit the frequency of the backup, you can use the Cron Expression via the admin console. 
 
-1. Launch the Admin Console. For information, see [Launch Admin Console]({% link content-services/latest/admin/admin-console.md %}#launch-admin-console).
+1. Launch the Admin Console. For information, see [Launch Admin Console]({% link content-services/7.2/admin/admin-console.md %}#launch-admin-console).
 2. In the **Repository Services** section, click **Search Service**.
 
     You see the Search Service page.

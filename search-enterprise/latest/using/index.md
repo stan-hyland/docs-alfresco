@@ -9,7 +9,7 @@ Alfresco Search Enterprise supported search query syntax.
 * [ADF Search Components](https://www.alfresco.com/abn/adf/docs/){:target="_blank"}
 * [ACA - Alfresco Content Application](https://github.com/alfresco/alfresco-content-app){:target="_blank"}
 * [Alfresco Digital Workspace]({% link digital-workspace/latest/index.md %})
-* [ReST API (only when using FTS search syntax)]({% link content-services/latest/develop/rest-api-guide/searching.md %})
+* [ReST API (only when using FTS search syntax)]({% link content-services/7.2/develop/rest-api-guide/searching.md %})
 
 > **Note:** Alfresco Share web application is not supported
 
@@ -17,8 +17,8 @@ Alfresco Search Enterprise supported search query syntax.
 
 * ACL Permission checks
 * Sorting by relevancy
-* [Searching by content type and controlling paging and sorting]({% link content-services/latest/develop/rest-api-guide/searching.md %}#searching-by-content-type-and-controlling-paging-and-sorting)
-* [Faceted search]({% link content-services/latest/develop/rest-api-guide/searching.md %}#faceted-search)
+* [Searching by content type and controlling paging and sorting]({% link content-services/7.2/develop/rest-api-guide/searching.md %}#searching-by-content-type-and-controlling-paging-and-sorting)
+* [Faceted search]({% link content-services/7.2/develop/rest-api-guide/searching.md %}#faceted-search)
 * Filter by content size and mimetype
 * Inclusion of additional properties in search results
 

@@ -64,7 +64,7 @@ This is recommended for evaluations only (i.e. test and development environments
 See [Install with Docker Compose]({% link transform-service/1.3/install/index.md %}#install-with-docker-compose) for more details.
 
 ### Non-containerized deployment {#prereq-non-containerized-deploy}
-Before installing Transform Services from the distribution ZIP file, [install Alfresco Content Services using distribution ZIP]({% link content-services/latest/install/zip/index.md %}).
+Before installing Transform Services from the distribution ZIP file, [install Alfresco Content Services using distribution ZIP]({% link content-services/7.2/install/zip/index.md %}).
 This will also install the message broker ActiveMQ, which is used by Transform Services.
 
 In a non-containerized environment you need to install the following software before installing Transform Services:
@@ -450,7 +450,7 @@ before continuing.
     bin/activemq start
     ```
 
-    For more information on installing and configuring ActiveMQ, see [Configure ActiveMQ]({% link content-services/latest/config/activemq.md %}).
+    For more information on installing and configuring ActiveMQ, see [Configure ActiveMQ]({% link content-services/7.2/config/activemq.md %}).
 
     Check the output to ensure that it starts successfully.
 
@@ -526,7 +526,7 @@ before continuing.
 
     This overrides the default properties provided by Content Services.
 
-    > **Note:** Any changes to `alfresco-global.properties` require you to restart Content Services to apply the updates. See the Content Services documentation [Using alfresco-global.properties]({% link content-services/latest/config/index.md%}#using-alfresco-globalproperties) for more information.
+    > **Note:** Any changes to `alfresco-global.properties` require you to restart Content Services to apply the updates. See the Content Services documentation [Using alfresco-global.properties]({% link content-services/7.2/config/index.md%}#using-alfresco-globalproperties) for more information.
 
 8. Check that the [configuration]({% link transform-service/1.3/config/index.md %}) is set up correctly for your environment.
 

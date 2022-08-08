@@ -96,4 +96,4 @@ The four main architectural areas are:
 
 For more information on launching a content services node, see [Start Media Management]({% link media-management/latest/config/start.md %}).
 
-For more information on advanced ActiveMQ settings, see [Configuring advanced settings in ActiveMQ]({% link content-services/latest/config/activemq.md %}#advanced).
+For more information on advanced ActiveMQ settings, see [Configuring advanced settings in ActiveMQ]({% link content-services/7.2/config/activemq.md %}#advanced).

@@ -8,7 +8,7 @@ Ensure that you have installed the required external and internal software befor
 
 For information on how to set up ActiveMQ and the content services node to start automatically, see [Running Media Management automatically](#running-media-management-automatically).
 
-For more information on advanced ActiveMQ settings, see [Configuring advanced settings in ActiveMQ]({% link content-services/latest/config/activemq.md %}#advanced).
+For more information on advanced ActiveMQ settings, see [Configuring advanced settings in ActiveMQ]({% link content-services/7.2/config/activemq.md %}#advanced).
 
 1. Navigate to the `activemq/bin` directory where `activemq` is the name of the directory where you installed ActiveMQ. Start ActiveMQ using the command:
 

@@ -67,15 +67,15 @@ See [Install with Docker Compose]({% link transform-service/1.2/install/index.md
 
 Before you can use the Transform Service zip, you need to install the software requirements listed.
 
-Follow the linked pages in the Content Services documentation, starting from [Install using distribution zip]({% link content-services/latest/install/zip/index.md %}).
+Follow the linked pages in the Content Services documentation, starting from [Install using distribution zip]({% link content-services/7.2/install/zip/index.md %}).
 
 #### Software requirements (zip)
 
 * Content Services: see [Supported Platforms]({% link transform-service/1.2/support/index.md %}) for the supported versions.
-* Messaging broker: see [Configure ActiveMQ]({% link content-services/latest/config/activemq.md %})
-* ImageMagick: see [Install ImageMagick]({% link content-services/latest/install/zip/additions.md %}#install-imagemagick)
-* LibreOffice: see [Install LibreOffice]({% link content-services/latest/install/zip/additions.md %}#install-libreoffice)
-* alfresco-pdf-renderer: see [Install alfresco-pdf renderer]({% link content-services/latest/install/zip/additions.md %}#install-alfresco-pdf-renderer)
+* Messaging broker: see [Configure ActiveMQ]({% link content-services/7.2/config/activemq.md %})
+* ImageMagick: see [Install ImageMagick]({% link content-services/7.2/install/zip/additions.md %}#install-imagemagick)
+* LibreOffice: see [Install LibreOffice]({% link content-services/7.2/install/zip/additions.md %}#install-libreoffice)
+* alfresco-pdf-renderer: see [Install alfresco-pdf renderer]({% link content-services/7.2/install/zip/additions.md %}#install-alfresco-pdf-renderer)
 
 See [Install with zip]({% link transform-service/1.2/install/index.md %}#install-with-zip) for more details.
 
@@ -349,7 +349,7 @@ The Transform Service distribution zip file includes all the files required to p
     bin/activemq start
     ```
 
-    For more information on installing and configuring ActiveMQ, see [Configure ActiveMQ]({% link content-services/latest/config/activemq.md %}).
+    For more information on installing and configuring ActiveMQ, see [Configure ActiveMQ]({% link content-services/7.2/config/activemq.md %}).
 
     Check the output to ensure that it starts successfully.
 
@@ -425,7 +425,7 @@ The Transform Service distribution zip file includes all the files required to p
 
     This overrides the default properties provided by Content Services.
 
-    > **Note:** Any changes to `alfresco-global.properties` require you to restart Content Services to apply the updates. See the Content Services documentation [Using alfresco-global.properties]({% link content-services/latest/config/index.md%}#using-alfresco-globalproperties) for more information.
+    > **Note:** Any changes to `alfresco-global.properties` require you to restart Content Services to apply the updates. See the Content Services documentation [Using alfresco-global.properties]({% link content-services/7.2/config/index.md%}#using-alfresco-globalproperties) for more information.
 
 8. Check that the [configuration]({% link transform-service/1.2/config/index.md %}) is set up correctly for your environment.
 

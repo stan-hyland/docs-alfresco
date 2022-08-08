@@ -35,7 +35,7 @@ You can mount S3 as a file system using a third party library, but is not recomm
 
 ## Does the S3 Connector work with the Alfresco Content Encryption module?
 
-A number of customers have requested that the [Alfresco Content Encryption]({% link content-services/latest/admin/content-stores.md %}#encrypted-content-store) module should be able to be deployed in conjunction with AWS KMS encryption on the S3 Content Store. In this release, we have taken steps to make this possible and it should be supported in the next release of the S3 Connector.
+A number of customers have requested that the [Alfresco Content Encryption]({% link content-services/7.2/admin/content-stores.md %}#encrypted-content-store) module should be able to be deployed in conjunction with AWS KMS encryption on the S3 Content Store. In this release, we have taken steps to make this possible and it should be supported in the next release of the S3 Connector.
 
 ## Is there any guidance to support cross-region replication when using KMS keys in S3?
 

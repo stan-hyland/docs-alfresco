@@ -9,6 +9,6 @@ There are two options for installing the Identity Service:
 * [Install using Helm charts]({% link identity-service/1.3/install/k8s/index.md %})
 * [Install using a ZIP distribution]({% link identity-service/1.3/install/zip/index.md %})
 
-> **Note:** It is recommended that you familiarize yourself with the [concepts of containerized deployment]({% link content-services/latest/install/containers/index.md %}) before working with Docker, Kubernetes, and Helm.
+> **Note:** It is recommended that you familiarize yourself with the [concepts of containerized deployment]({% link content-services/7.2/install/containers/index.md %}) before working with Docker, Kubernetes, and Helm.
 
 Instructions are also provided for [upgrading the Identity Service]({% link identity-service/1.3/upgrade/index.md %}).

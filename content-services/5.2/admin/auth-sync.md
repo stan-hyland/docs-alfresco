@@ -2,7 +2,7 @@
 title: Set up authentication and sync
 ---
 
-Use this information to manage user authentication. Set up if users should be authenticated with the database, LDAP, SSO etc. Set up how user and group information should be synced (imported) with Content Services. Users and groups can also be managed from the Share [Admin Tools]{% link content-services/latest/admin/users-groups.md %}, but it’s more common to sync with a Directory Service, which is discussed here.
+Use this information to manage user authentication. Set up if users should be authenticated with the database, LDAP, SSO etc. Set up how user and group information should be synced (imported) with Content Services. Users and groups can also be managed from the Share [Admin Tools]{% link content-services/7.2/admin/users-groups.md %}, but it’s more common to sync with a Directory Service, which is discussed here.
 
 Authentication subsystems and authentication chains are discussed first as an understanding of those is necessary when configuring authentication and synchronization.
 

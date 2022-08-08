@@ -244,7 +244,7 @@ Once you've configured the data source you can define folder entity data models.
 
 With Alfresco Content Services you can define and use custom content models using either XML or the Alfresco Share Model Manager. You can import content models and use them in your data models.
 
-See [Model Manager]({% link content-services/latest/config/models.md %}) for more details.
+See [Model Manager]({% link content-services/7.2/config/models.md %}) for more details.
 
 1. Export the model from Alfresco Content Services.
 

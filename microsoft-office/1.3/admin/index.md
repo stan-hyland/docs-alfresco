@@ -46,7 +46,7 @@ If you type: `http://server:port/_vti_bin/`, you will see a message Welcome to A
 
 If these files and messages are not available from the browser, then AOS has not been deployed properly.
 
-See [Install Alfresco WARs]({% link content-services/latest/install/zip/tomcat.md %}#install-alfresco-wars) for information on where the deployed `ROOT` and `_vti_bin` WAR files need to be located. If `_vti_bin.war` does not exist, you'll need to reinstall the Alfresco Office Services AMP.
+See [Install Alfresco WARs]({% link content-services/7.2/install/zip/tomcat.md %}#install-alfresco-wars) for information on where the deployed `ROOT` and `_vti_bin` WAR files need to be located. If `_vti_bin.war` does not exist, you'll need to reinstall the Alfresco Office Services AMP.
 
 ## Extra files created when mounting AOS using WebDAV and Mac Finder
 

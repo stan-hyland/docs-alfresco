@@ -70,7 +70,7 @@ The SAP Connector is packaged as Alfresco Module Package (AMP) files.
 
 2. Use the Module Management Tool (MMT) to install the {% include tooltip.html word="AMP" text="AMP" %} files into the Repository WAR (`alfresco.war`) and the Share WAR (`share.war`).
 
-    For more information, see [Using the Module Management Tool (MMT)]({% link content-services/latest/develop/extension-packaging.md %}#using-the-module-management-tool-mmt) and [Installing an Alfresco Module Package]({% link content-services/latest/install/zip/amp.md %}).
+    For more information, see [Using the Module Management Tool (MMT)]({% link content-services/7.2/develop/extension-packaging.md %}#using-the-module-management-tool-mmt) and [Installing an Alfresco Module Package]({% link content-services/7.2/install/zip/amp.md %}).
 
 3. Add the related properties to the `alfresco-global.properties` file.
 
@@ -161,4 +161,4 @@ To set up the SAP Connector in clustered landscapes for high availability:
 1. Install the `sap-content-connector-repo-5.x.amp` for Content Services on each node in the cluster.
 2. Install the `sap-content-connector-share-5.x.amp` for Alfresco Share on each node in the cluster.
 3. The `alfresco-global.properties` on each node must be updated with the SAP related properties.
-4. On the SAP side, for each SAP Content Repository (transaction `OAC0`) the HTTP-Server must point to the load balancer instead of a dedicated application server instance. See the Content Services documentation for [high availability]({% link content-services/latest/admin/cluster.md %}#scenariohighthrucluster).
+4. On the SAP side, for each SAP Content Repository (transaction `OAC0`) the HTTP-Server must point to the load balancer instead of a dedicated application server instance. See the Content Services documentation for [high availability]({% link content-services/7.2/admin/cluster.md %}#scenariohighthrucluster).

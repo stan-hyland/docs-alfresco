@@ -52,7 +52,7 @@ The S3 Connector is packaged as an Alfresco Module Package (AMP) file.
 
 3. Use the Module Management Tool (MMT) to install the AMP into the repository WAR (`alfresco.war`).
 
-    For more information, see [Using the Module Management Tool (MMT)]({% link content-services/latest/develop/extension-packaging.md %}#using-the-module-management-tool-mmt) and [Installing an Alfresco Module Package]({% link content-services/latest/install/zip/amp.md %}).
+    For more information, see [Using the Module Management Tool (MMT)]({% link content-services/7.2/develop/extension-packaging.md %}#using-the-module-management-tool-mmt) and [Installing an Alfresco Module Package]({% link content-services/7.2/install/zip/amp.md %}).
 
 4. Check that the [configuration]({% link aws-s3/3.0/config/index.md %}) is set up correctly for your environment.
 

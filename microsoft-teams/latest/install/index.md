@@ -45,7 +45,7 @@ Teams app into the Microsoft Teams client an [app manifest](#create-teams-integ-
 
 ### Install Content Services including UI {#install-acs}
 
-Install [Alfresco Content Services]({% link content-services/latest/install/index.md %}),
+Install [Alfresco Content Services]({% link content-services/7.2/install/index.md %}),
 [Alfresco Digital Workspace]({% link digital-workspace/latest/install/index.md %}), and the
 [Identity Service]({% link identity-service/latest/install/index.md %}).
 

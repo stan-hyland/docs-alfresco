@@ -4,7 +4,7 @@ title: Administering Media Management
 
 This information helps you to monitor and administer Alfresco Media Management.
 
-If you are backing up and restoring Media Management, use the standard Alfresco guidance: [Back up and restore]({% link content-services/latest/admin/backup-restore.md %}).
+If you are backing up and restoring Media Management, use the standard Alfresco guidance: [Back up and restore]({% link content-services/7.2/admin/backup-restore.md %}).
 
 ## Monitoring Media Management
 

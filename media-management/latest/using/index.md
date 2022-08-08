@@ -8,7 +8,7 @@ Features provided with Media Management include video support and enhanced image
 
 You can embed metadata into a file using rules, with the Embed properties as metadata in content action, and view metadata in Alfresco and in an image editor. See [Working with metadata]({% link media-management/latest/tutorial/index.md %}#working-with-metadata) for more information about extracting and embedding metadata.
 
-> **Note:** Video transformations are very resource intensive and can take a long time to complete. Make sure that any rules that you create that use video transcoding run in the background, to prevent the rule from failing due to an Alfresco timeout. For more information about creating rules, see [Creating a rule]({% link content-services/latest/using/content/rules.md %}).
+> **Note:** Video transformations are very resource intensive and can take a long time to complete. Make sure that any rules that you create that use video transcoding run in the background, to prevent the rule from failing due to an Alfresco timeout. For more information about creating rules, see [Creating a rule]({% link content-services/7.2/using/content/rules.md %}).
 
 Media Management is integrated with AWS CloudFront publishing channel for publishing your content.
 
@@ -100,7 +100,7 @@ Renditions, for example, lower resolution JPEG image and video proxy files, are 
 
 You can explicitly request a rendition by clicking the **+** icon in the **Renditions** panel of the document details page. See [Viewing media]({% link media-management/latest/using/index.md %}#viewing-media) for more information about the Renditions panel.
 
-You can perform an ad hoc format transformation in a number of ways, for example, create a rule with a Transform and Copy Content action. See [Applying rules to folders]({% link content-services/latest/using/content/rules.md %}) for more information about setting up rules.
+You can perform an ad hoc format transformation in a number of ways, for example, create a rule with a Transform and Copy Content action. See [Applying rules to folders]({% link content-services/7.2/using/content/rules.md %}) for more information about setting up rules.
 
 ## Publishing media
 
@@ -118,7 +118,7 @@ Alfresco Media Management provides publishing options in Alfresco.
 
 Alfresco Media Management provides a black background (dark theme) for Share, that mutes elements until they are required, and makes it easier to work with rich media content. If you're a site administrator you can enable this theme.
 
-For more information about using themes in general, see [Share themes]({% link content-services/latest/develop/share-ext-points/share-config.md %}#sharethemeconfig). Only an administrator can enable a theme.
+For more information about using themes in general, see [Share themes]({% link content-services/7.2/develop/share-ext-points/share-config.md %}#sharethemeconfig). Only an administrator can enable a theme.
 
 1. From the Content Services toolbar, select Admin Tools and click Application in the Tools list.
 

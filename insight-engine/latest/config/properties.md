@@ -12,7 +12,7 @@ The `solrcore.properties` configuration file is the property configuration file 
 |-------------|-----------|
 |alfresco.aclBatchSize|This property is used for batch fetching updates during tracking, for example `10`.|
 |alfresco.acl.tracker.maxParallelism|Defines the number of threads that are used when indexing documents using the ACL Tracker, for example `32`.|
-|alfresco.baseUrl|This property configures the base URL to Alfresco Content Services web project, for example `/alfresco`. If you need to change the `baseUrl` value, see [Deploy with a different context path]{% link content-services/latest/config/repository.md %}#deploy-with-a-different-context-path).|
+|alfresco.baseUrl|This property configures the base URL to Alfresco Content Services web project, for example `/alfresco`. If you need to change the `baseUrl` value, see [Deploy with a different context path]{% link content-services/7.2/config/repository.md %}#deploy-with-a-different-context-path).|
 |alfresco.batch.count|This property indicates the number of updates that should be made to this core before a commit is executed, for example  `1000`.|
 |alfresco.cascade.tracker.enabled|Index fields required for path-based queries. Disabling support for path queries (i.e. setting this to false) can speed up indexing in sharded systems, for example `true`.  NOTE: Updating this property will result in path-based fields not being populated. Consequently it should not be changed after the initial startup of the server.|
 |alfresco.cascade.tracker.maxParallelism|Defines the number of threads that are used when indexing documents using the Cascade Tracker, for example `32`.|
@@ -112,7 +112,7 @@ If you wish to change the default value of a property, add the relevant property
 
 ### Data dictionary options
 
-The indexing behavior for each property can be set in the content model. By default the index is eventually consistent with the created content and properties are tokenized when indexed. For more information on how to configure indexing for properties in the content model, view the [Content Services documentation]({% link content-services/latest/develop/repo-ext-points/content-model.md %}).
+The indexing behavior for each property can be set in the content model. By default the index is eventually consistent with the created content and properties are tokenized when indexed. For more information on how to configure indexing for properties in the content model, view the [Content Services documentation]({% link content-services/7.2/develop/repo-ext-points/content-model.md %}).
 
 ### Indexing options
 

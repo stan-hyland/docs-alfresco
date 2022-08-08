@@ -4,7 +4,7 @@ title: Install with zip
 
 The SAML Module is installed as a module of Alfresco Content Services. These modules are referred to as Alfresco Module Packages (AMP) and use the `.amp` file format.
 
-AMPs can be installed in the `amps` directory of your Alfresco Content Services installation or by using the [Module Management Tool]({% link content-services/latest/develop/extension-packaging.md %}#using-the-module-management-tool-mmt).
+AMPs can be installed in the `amps` directory of your Alfresco Content Services installation or by using the [Module Management Tool]({% link content-services/7.2/develop/extension-packaging.md %}#using-the-module-management-tool-mmt).
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ The way you configure keystores in Content Services and related projects has cha
 
 The recommended way of specifying the configuration is to use JVM system properties.
 
-See the Alfresco Content Services documentation, [Managing Alfresco keystore]({% link content-services/latest/admin/security.md %}#managealfkeystores), for more details the keystores changes.
+See the Alfresco Content Services documentation, [Managing Alfresco keystore]({% link content-services/7.2/admin/security.md %}#managealfkeystores), for more details the keystores changes.
 
 In the following steps, you can follow either:
 
@@ -87,7 +87,7 @@ In the following steps, you can follow either:
 
     Check the output from the script to ensure that the AMP files have installed successfully.
 
-5. If you are not using Tomcat, use the [Module Management Tool]({% link content-services/latest/develop/extension-packaging.md %}#using-the-module-management-tool-mmt) to apply the AMP files.
+5. If you are not using Tomcat, use the [Module Management Tool]({% link content-services/7.2/develop/extension-packaging.md %}#using-the-module-management-tool-mmt) to apply the AMP files.
 
 6. The SAML module does not supply a service provider certificate that is used to sign messages sent to the IdP. You must generate your own certificate, as shown in the following example:
 
@@ -152,11 +152,11 @@ In the following steps, you can follow either:
 
 ## Uninstall steps
 
-Use the [Module Management Tool]({% link content-services/latest/develop/extension-packaging.md %}#using-the-module-management-tool-mmt) to uninstall the SAML Module from Alfresco Content Services.
+Use the [Module Management Tool]({% link content-services/7.2/develop/extension-packaging.md %}#using-the-module-management-tool-mmt) to uninstall the SAML Module from Alfresco Content Services.
 
 1. Stop the Alfresco server.
 
-2. Use the information in [Uninstalling an AMP file]({% link content-services/latest/install/zip/amp.md %}#uninstall-an-amp-file) to uninstall each AMP file.
+2. Use the information in [Uninstalling an AMP file]({% link content-services/7.2/install/zip/amp.md %}#uninstall-an-amp-file) to uninstall each AMP file.
 
     For example, from the Alfresco root directory, you need two commands:
 

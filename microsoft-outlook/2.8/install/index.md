@@ -77,7 +77,7 @@ where `#` is an ascending index number that hasn't been used.
 
 ### Java requirements
 
-* Java: OpenJDK 11 is recommended. This needs to be installed on the server only (i.e. not the Outlook clients). See the Content Services [Supported Platforms]({% link content-services/latest/support/index.md %}) for more information.
+* Java: OpenJDK 11 is recommended. This needs to be installed on the server only (i.e. not the Outlook clients). See the Content Services [Supported Platforms]({% link content-services/7.2/support/index.md %}) for more information.
 
 ### Access to Docker image
 
@@ -93,7 +93,7 @@ transform-outlook
 
 > **Note:** Make sure that you request credentials for Alfresco Content Services and Alfresco Outlook Integration, so that you can use the additional `transform-outlook-1.0.x` Docker image. Version 1.0.0 of the Outlook T-Engine can also be used for the latest Outlook Integration release (version 2.8.1).
 
-> **Note:** It is recommended that you familiarize yourself with the concepts of [containerized deployment]({% link content-services/latest/install/containers/index.md %}) before working with Docker.
+> **Note:** It is recommended that you familiarize yourself with the concepts of [containerized deployment]({% link content-services/7.2/install/containers/index.md %}) before working with Docker.
 
 ## Install AMPs
 
@@ -176,7 +176,7 @@ The Outlook Integration Transform Engine (or T-Engine) enables transformation of
 
 If you wish to use a Tomcat application server, you can use the WAR bundle to install the Outlook Integration T-Engine.
 
-> **Note:** Check the supported Tomcat version based on your version of the [Content Services documentation]({% link content-services/latest/support/index.md %}) before continuing.
+> **Note:** Check the supported Tomcat version based on your version of the [Content Services documentation]({% link content-services/7.2/support/index.md %}) before continuing.
 
 1. Install the latest required version of Tomcat, for example, [Tomcat 8.5](https://tomcat.apache.org/download-80.cgi){:target="_blank"} to run as a service.
 
@@ -249,7 +249,7 @@ To deploy the Outlook Integration T-Engine with the Transform Service, you'll ne
 
     > **Note:** If these settings are missing for Content Services 6.2.2, the transformation of MSG and EML files to PDFs won't work. You can ignore these settings for Content Services 7, as they're already set by default.
 
-See the Content Services documentation - [T-Engine configuration](https://github.com/Alfresco/acs-packaging/blob/master/docs/creating-a-t-engine.md#t-engine-configuration){:target="_blank"} for more details. For further development, see [Content Transformers and Renditions Extension Points]({% link content-services/latest/develop/repo-ext-points/content-transformers-renditions.md %}).
+See the Content Services documentation - [T-Engine configuration](https://github.com/Alfresco/acs-packaging/blob/master/docs/creating-a-t-engine.md#t-engine-configuration){:target="_blank"} for more details. For further development, see [Content Transformers and Renditions Extension Points]({% link content-services/7.2/develop/repo-ext-points/content-transformers-renditions.md %}).
 
 ## Install Alfresco Outlook Client in Microsoft Outlook {#installclient}
 
@@ -351,7 +351,7 @@ This information provides uninstall directions for Alfresco Content Services.
 
 1. Stop the Alfresco server.
 
-2. Use the information in [Uninstall an Amp file]({% link content-services/latest/install/zip/amp.md %}#uninstall-an-amp-file) to uninstall each AMP file.
+2. Use the information in [Uninstall an Amp file]({% link content-services/7.2/install/zip/amp.md %}#uninstall-an-amp-file) to uninstall each AMP file.
 
     For example, from the Alfresco root directory, you need two commands:
 

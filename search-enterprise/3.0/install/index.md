@@ -6,7 +6,7 @@ Alfresco Search Enterprise 3.0 consists of Alfresco Content Services, Elasticsea
 
 ## Prerequisites
 
-* Alfresco Content Services 7.1 that includes Alfresco ActiveMQ, Alfresco Transform Service, and Database, for more see [Install overview]({% link content-services/latest/install/index.md %}).
+* Alfresco Content Services 7.1 that includes Alfresco ActiveMQ, Alfresco Transform Service, and Database, for more see [Install overview]({% link content-services/7.2/install/index.md %}).
 * Elasticsearch server 7.10. It may be used as a standard managed service or can be installed with the default configuration, for more see [Install Elasticsearch server](#install-elasticsearch-server).
 * Elasticsearch Connector 3.0
 
@@ -14,7 +14,7 @@ See the [Supported platforms]({% link search-enterprise/3.0/support/index.md %})
 
 ## Configure Subsystem in Repository
 
-You must first activate and configure the Search Services subsystem in Content Services by using either the `TOMCAT_HOME>/shared/classes/alfresco-global.properties` file or the [Repository Admin Web Console]({% link content-services/latest/admin/admin-console.md %}).
+You must first activate and configure the Search Services subsystem in Content Services by using either the `TOMCAT_HOME>/shared/classes/alfresco-global.properties` file or the [Repository Admin Web Console]({% link content-services/7.2/admin/admin-console.md %}).
 
 Add the following lines to the configuration file `alfresco-global.properties` to enable the Elasticsearch Search subsystem.
 

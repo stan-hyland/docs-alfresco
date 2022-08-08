@@ -54,7 +54,7 @@ There are two main options for deployment:
 * [Distribution zip install]({% link transform-service/latest/install/index.md %}#prereq-non-containerized-deploy)
 
 >**Important:** The Transform Service is deployed as part of the Alfresco Content Services deployment for containerized 
->deployments only. See [What's deployed in Content Services]({% link content-services/latest/install/containers/index.md %}#whats-deployed-in-content-services) 
+>deployments only. See [What's deployed in Content Services]({% link content-services/7.2/install/containers/index.md %}#whats-deployed-in-content-services) 
 >for the list of components.
 
 >**Important:** If you're installing Content Services using the distribution zip, you can install the Transform Service 

@@ -3,7 +3,7 @@ title: Getting started in developing
 ---
 
 Developing for **Alfresco Content Services - Community Edition** is the same as developing for **Alfresco Content Services - 
-Enterprise Edition**. For an introduction, and access to the developer documentation, see [this section]({% link content-services/latest/develop/index.md %}) 
+Enterprise Edition**. For an introduction, and access to the developer documentation, see [this section]({% link content-services/7.2/develop/index.md %}) 
 of the Enterprise documentation.
 
 >**Note:** You should be aware that some features are not available when using the Community Edition as they are paid for 

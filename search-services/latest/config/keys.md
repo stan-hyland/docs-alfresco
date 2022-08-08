@@ -175,7 +175,7 @@ Before continuing, make sure that you've already completed the steps in [Generat
 
         > **Note:** If you're using a different keystore or truststore type other than the default, `JCEKS`, you must change the value in the properties file. Also, make sure that the keystore and truststore file locations are correct for your environment.
 
-    See [Installing the Tomcat application server]({% link content-services/latest/install/zip/tomcat.md %}) and [Solr configuration files]({% link search-services/latest/config/index.md %}#solr-configuration-files) for more.
+    See [Installing the Tomcat application server]({% link content-services/7.2/install/zip/tomcat.md %}) and [Solr configuration files]({% link search-services/latest/config/index.md %}#solr-configuration-files) for more.
 
 5. Change the SSL properties in `<SOLR_HOME>/solrhome/templates/rerank/conf/solrcore.properties`.
 

@@ -125,4 +125,4 @@ To deploy the Document Transformation Engine T-Engine with the Transform Service
     -DlocalTransform.transform-dte.url=http://transform-dte-engine:8090/
     ```
 
-See the Content Services documentation - [T-Engine configuration](https://github.com/Alfresco/acs-packaging/blob/master/docs/creating-a-t-engine.md#t-engine-configuration){:target="_blank"} for more details. For further development, see [Content Transformers and Renditions Extension Points]({% link content-services/latest/develop/repo-ext-points/content-transformers-renditions.md %}).
+See the Content Services documentation - [T-Engine configuration](https://github.com/Alfresco/acs-packaging/blob/master/docs/creating-a-t-engine.md#t-engine-configuration){:target="_blank"} for more details. For further development, see [Content Transformers and Renditions Extension Points]({% link content-services/7.2/develop/repo-ext-points/content-transformers-renditions.md %}).

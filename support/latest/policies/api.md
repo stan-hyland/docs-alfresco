@@ -14,10 +14,10 @@ Alfresco provides the following **supported APIs**:
   * Platform Public Java API
   * Javascript API
   * [FreeMarker API
-  * [Platform Extension Points]({% link content-services/latest/develop/repo-ext-points/index.md %})
-* On the Alfresco Share side, [Share Extension Points]({% link content-services/latest/develop/share-ext-points/index.md %}) to extend the Share UI functionality
+  * [Platform Extension Points]({% link content-services/7.2/develop/repo-ext-points/index.md %})
+* On the Alfresco Share side, [Share Extension Points]({% link content-services/7.2/develop/share-ext-points/index.md %}) to extend the Share UI functionality
 * On the Alfresco repository side, integrate and build powerful content centric applications and integrations:
-  * [REST/CMIS APIs]({% link content-services/latest/develop/rest-api-guide/index.md %})
+  * [REST/CMIS APIs]({% link content-services/7.2/develop/rest-api-guide/index.md %})
 
 These APIs are part of the Alfresco developer platform and should be used to extend Alfresco Content Services. The **API Support Status** is defined at API-set level and maintained in the [Product Support Status](https://www.alfresco.com/services/subscription/technical-support/product-support-status){:target="_blank"} page.
 
@@ -29,10 +29,10 @@ In addition to its APIs, Alfresco provides several way to extend the Alfresco Co
 
 Alfresco provides the following **Supported Extension Points**:
 
-* [Platform Extension Points]({% link content-services/latest/develop/repo-ext-points/index.md %}) to extend out of the box Alfresco Content Services Platform functionality
-* [Share Extension Points]({% link content-services/latest/develop/share-ext-points/index.md %}) to extend out of the box the Alfresco Share functionality
+* [Platform Extension Points]({% link content-services/7.2/develop/repo-ext-points/index.md %}) to extend out of the box Alfresco Content Services Platform functionality
+* [Share Extension Points]({% link content-services/7.2/develop/share-ext-points/index.md %}) to extend out of the box the Alfresco Share functionality
 
-These Extension points are part of the Alfresco Developer platform and should be used to extend Alfresco Content Services. The **Extension Points Support Status** is defined per each Extension Point for [Platform]({% link content-services/latest/develop/repo-ext-points/index.md %}) and [Share]({% link content-services/latest/develop/share-ext-points/index.md %}).
+These Extension points are part of the Alfresco Developer platform and should be used to extend Alfresco Content Services. The **Extension Points Support Status** is defined per each Extension Point for [Platform]({% link content-services/7.2/develop/repo-ext-points/index.md %}) and [Share]({% link content-services/7.2/develop/share-ext-points/index.md %}).
 
 > **Note:** Customizations and Integrations not using these supported Extension Points **cannot be supported by Alfresco Software**.
 

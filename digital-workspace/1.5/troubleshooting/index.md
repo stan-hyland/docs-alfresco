@@ -6,7 +6,7 @@ Here are the answers to some frequently asked questions.
 
 ### When attempting to login a problem with CORS is reported
 
-Refer to [Cross Origin Resource Sharing (CORS) filters]({% link content-services/latest/config/repository.md %}#cors-configuration) and [Cross-Origin Resource Sharing (CORS)](https://enable-cors.org/){:target="_blank"}.
+Refer to [Cross Origin Resource Sharing (CORS) filters]({% link content-services/7.2/config/repository.md %}#cors-configuration) and [Cross-Origin Resource Sharing (CORS)](https://enable-cors.org/){:target="_blank"}.
 
 ### Can I customize Alfresco Digital Workspace
 

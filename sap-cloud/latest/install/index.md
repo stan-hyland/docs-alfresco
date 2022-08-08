@@ -37,8 +37,8 @@ The SAP Cloud Connector is packaged as an {% include tooltip.html word="AMP" tex
 
     * Use the Module Management Tool (MMT) to install both repository AMP files into the repository WAR (`alfresco.war`). For more information, see:
 
-        * [Using the Module Management Tool (MMT)]({% link content-services/latest/develop/extension-packaging.md %}#using-the-module-management-tool-mmt)
-        * [Installing an Alfresco Module Package]({% link content-services/latest/install/zip/amp.md %})
+        * [Using the Module Management Tool (MMT)]({% link content-services/7.2/develop/extension-packaging.md %}#using-the-module-management-tool-mmt)
+        * [Installing an Alfresco Module Package]({% link content-services/7.2/install/zip/amp.md %})
 
 3. Start Content Services.
 

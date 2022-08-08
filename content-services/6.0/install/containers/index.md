@@ -117,7 +117,7 @@ There are a number of software requirements for installing (or deploying) Conten
 
 Note that the [VERSIONS.md](https://github.com/Alfresco/acs-packaging/blob/master/distribution/src/main/resources/VERSIONS.md){:target="_blank"} file in GitHub lists the supported versions.
 
-> **Note:** The images downloaded directly from [Docker Hub](https://hub.docker.com/u/alfresco/){:target="_blank"}, are for a limited trial of the Enterprise version of Content Services that goes into read-only mode after 2 days. For a longer (30-day) trial, get the Alfresco Content Services Download Trial by following the steps in the Content Services 6.2 documentation [Deploy using Docker Compose]({% link content-services/latest/install/containers/docker-compose.md %}).
+> **Note:** The images downloaded directly from [Docker Hub](https://hub.docker.com/u/alfresco/){:target="_blank"}, are for a limited trial of the Enterprise version of Content Services that goes into read-only mode after 2 days. For a longer (30-day) trial, get the Alfresco Content Services Download Trial by following the steps in the Content Services 6.2 documentation [Deploy using Docker Compose]({% link content-services/7.2/install/containers/docker-compose.md %}).
 
 You can review the requirements for your chosen deployment method below.
 
