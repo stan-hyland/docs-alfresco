@@ -8,6 +8,9 @@ via the ReST API.
 The ReST API has a full set of calls to do most things around rules and rule sets.
 
 ## Common error messages
+There are some error messages that you might encounter when you start working with the rules ReST API, get familiar 
+with them here before you start working with the API.
+
 These endpoints work only with folder nodes, if you use other node types, then the following error is returned:
 
 ```json
@@ -22,7 +25,7 @@ These endpoints work only with folder nodes, if you use other node types, then t
 }
 ```
 
-If you use an incorrect folder node id, then the following error is returned:
+If you use an incorrect folder node id, or an incorrect rule id, then the following error is returned:
 
 ```json
 {
@@ -36,10 +39,38 @@ If you use an incorrect folder node id, then the following error is returned:
 }
 ```
 
+You are creating or updating a rule but forgot to supply the POST data file (JSON), or it's not in the right place:
+
+```json
+{
+  "error": {
+    "errorKey": "Could not read content from HTTP request body: No content to map due to end-of-input\n at [Source: (BufferedReader); line: 1, column: 0]",
+    "statusCode": 400,
+    "briefSummary": "09120005 Could not read content from HTTP request body: No content to map due to end-of-input\n at [Source: (BufferedReader); line: 1, column: 0]",
+    "stackTrace": "For security reasons the stack trace is no longer displayed, but the property is kept for previous versions",
+    "descriptionURL": "https://api-explorer.alfresco.com"
+  }
+}
+```
+
+You are updating a rule definition but are not supplying the complete definition:
+
+```json
+{
+  "error": {
+    "errorKey": "A rule must have at least one action",
+    "statusCode": 400,
+    "briefSummary": "09120007 A rule must have at least one action",
+    "stackTrace": "For security reasons the stack trace is no longer displayed, but the property is kept for previous versions",
+    "descriptionURL": "https://api-explorer.alfresco.com"
+  }
+}
+```
+
 ## List rules {#list-rules}
 Listing the rules applied to a folder in the repository is done with the following endpoint.
 
-**API Explorer URL**: [http://localhost:8080/api-explorer/#/rules/listRules](http://localhost:8080/api-explorer/#/rules/listRules){:target="_blank"}
+**API Explorer URL**: [http://localhost:8080/api-explorer/#/rul es/listRules](http://localhost:8080/api-explorer/#/rules/listRules){:target="_blank"}
 
 Listing rules can be done with the following HTTP GET call:
 
@@ -382,51 +413,177 @@ curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -
 The response contains the `id` for the new rule definition (i.e. "799d25bf-a41d-401a-8e9b-ac5b6c256dfd"). This id can be 
 used later on to get the rule definition.
 
-## Update a rule
-Updating the metadata for an Alfresco folder rule.
+## Update a rule definition
+Updating the definition for an Alfresco folder rule. This endpoint can be used to update the definition of the rule.
 
 **API Explorer URL:** [http://localhost:8080/api-explorer/#/rules/updateRule](http://localhost:8080/api-explorer/#/rules/updateRule){:target="_blank"}
 
 **See also:** [How to create a rule](#createrule)
 
-It’s also possible to update the site metadata after the site has been created. We can for example change the 
-description and title, and it is even possible to change the visibility of the site. Use the following PUT call:
+It’s possible to update the rule configuration/metadata after the rule has been created. We can for example change the 
+name, description, disable/enable, if it is inherited etc. Use the following PUT call:
 
-`http://localhost:8080/alfresco/api/-default-/public/alfresco/versions/1/sites/{id}`
+`http://localhost:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/{id}/rule-sets/{ruleSetId}/rules/{ruleId}`
 
-The identifier for the site to be updated is specified with the `{id}` parameter.
+The `{id}` part can be any of the constants `-root-`, `-my-`, `-shared-` or an Alfresco Node Identifier
+(e.g. d8f561cc-e208-4c63-a316-1ea3d3a4e10e) for the folder that contains the rule. The `ruleSetId` parameter is the
+identifier for a rule set. The alias `-default-` can be used to refer to the only rule set on a folder. There's currently
+no support for multiple rule sets linked to a single folder, and the behaviour of `-default-` is not defined in this case.
+The `ruleId` is the identifier for the rule that should be updated.
 
-The body for a site update call looks like this:
+The body for a rule definition update call looks like this:
 
 ```json
 {
-  "title": "{the updated name of the site}",
-  "description": "{the updated description of the site}",
-  "visibility": "[PUBLIC|PRIVATE|MODERATED]"
+  "name": "string",
+  "description": "string",
+  "isEnabled": true,
+  "isInheritable": false,
+  "isAsynchronous": false,
+  "errorScript": "string",
+  "triggers": [
+    "inbound"
+  ],
+  "conditions": {
+    "inverted": false,
+    "booleanMode": "and",
+    "compositeConditions": [],
+    "simpleConditions": []
+  },
+  "actions": [
+    {
+      "actionDefinitionId": "string",
+      "params": {}
+    }
+  ]
 }
 ```
 
-To update a site with the `my-stuff` `id` make the following call:
+For an explanation of the properties see the [create rule section](#createrule).
+
+In the following example we are going to update the name, description, inheritance, and triggers for a rule. The updated 
+data looks like this:
+
+```json
+{
+  "name": "Apply the Effective aspect to PDFs (UPDATED)",
+  "description": "When a PDF with size>1KB is uploaded or updated apply the Effective aspect (cm:effective) (UPDATED)",
+  "isInheritable": false,
+  "triggers": [
+    "inbound"
+  ]
+}
+```
+
+Unfortunately we cannot send just the data being updated, we need to send the complete definition of the rule, including 
+the updated properties:
+
+```json
+{
+  "isEnabled": true,
+  "name": "Apply the Effective aspect to PDFs (UPDATED)",
+  "description": "When a PDF with size>1KB is uploaded or updated apply the Effective aspect (cm:effective) (UPDATED)",
+  "isInheritable": false,
+  "triggers": [
+    "inbound"
+  ],
+  "conditions": {
+    "inverted": false,
+    "booleanMode": "and",
+    "compositeConditions": [
+      {
+        "inverted": false,
+        "booleanMode": "and",
+        "simpleConditions": [
+          {
+            "field": "mimetype",
+            "comparator": "equals",
+            "parameter": "application/pdf"
+          },
+          {
+            "field": "size",
+            "comparator": "greater_than",
+            "parameter": "1000"
+          }
+        ]
+      }
+    ]
+  },
+  "actions": [
+    {
+      "actionDefinitionId": "add-features",
+      "params": {
+        "aspect-name": "cm:effectivity",
+        "cm:from": "2022-09-10T08:00:00.000+0000",
+        "cm:to": "2022-09-12T21:00:00.000+0000"
+      }
+    }
+  ],
+  "isAsynchronous": false
+}
+```
+
+Save the above data JSON in a file called something like `update-rule.json`. We will send this file with the following
+call to update the rule.
+
+Here is how the call looks like, assuming that we have stored the query JSON data in a file called `update-rule.json`
+(it does not work to write the query with the `-d` curl parameter on the command line). The rule being updated have 
+the id `263bdbc9-44cc-46c8-897d-886ad920fd06` and it is contained in a folder with the Alfresco Node ID
+`5525510a-f188-40c7-9ca5-5cba6e6d41f3`:
 
 ```bash
-$ curl -X PUT -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Authorization: Basic VElDS0VUXzA4ZWI3ZTJlMmMxNzk2NGNhNTFmMGYzMzE4NmNjMmZjOWQ1NmQ1OTM=' -d '{ "title": "My stuff UPDATED", "description": "My stuff Desc UPDATED", "visibility": "PRIVATE"}' 'http://localhost:8080/alfresco/api/-default-/public/alfresco/versions/1/sites/my-stuff' | jq
+curl -X PUT -H 'Content-Type: application/json' -H 'Accept: application/json' --header 'Authorization: Basic VElDS0VUX2JmMmVjZjg2N2MxYWU4MzQ4MzhhZWI3ZWU0ZTkyYTNjNGMxYTgxY2U=' --data-binary '@update-rule.json' 'http://localhost:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/5525510a-f188-40c7-9ca5-5cba6e6d41f3/rule-sets/-default-/rules/263bdbc9-44cc-46c8-897d-886ad920fd06' | jq
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100   303    0   208  100    95   1004    458 --:--:-- --:--:-- --:--:--  1463
+100  1771    0   755  100  1016    782   1053 --:--:-- --:--:-- --:--:--  1850
 {
   "entry": {
-    "role": "SiteManager",
-    "visibility": "PRIVATE",
-    "guid": "7ef8798f-bbcd-4d92-8db5-4d51edf739f6",
-    "description": "My stuff Desc UPDATED",
-    "id": "my-stuff",
-    "preset": "site-dashboard",
-    "title": "My stuff UPDATED"
+    "isEnabled": true,
+    "name": "Apply the Effective aspect to PDFs (UPDATED)",
+    "description": "When a PDF with size>1KB is uploaded or updated apply the Effective aspect (cm:effective) (UPDATED)",
+    "id": "263bdbc9-44cc-46c8-897d-886ad920fd06",
+    "isInheritable": false,
+    "triggers": [
+      "inbound"
+    ],
+    "conditions": {
+      "inverted": false,
+      "booleanMode": "and",
+      "compositeConditions": [
+        {
+          "inverted": false,
+          "booleanMode": "and",
+          "simpleConditions": [
+            {
+              "field": "mimetype",
+              "comparator": "equals",
+              "parameter": "application/pdf"
+            },
+            {
+              "field": "size",
+              "comparator": "greater_than",
+              "parameter": "1000"
+            }
+          ]
+        }
+      ]
+    },
+    "actions": [
+      {
+        "actionDefinitionId": "add-features",
+        "params": {
+          "cm:from": "2022-09-10T08:00:00.000+0000",
+          "aspect-name": "cm:effectivity",
+          "cm:to": "2022-09-12T21:00:00.000+0000"
+        }
+      }
+    ],
+    "isAsynchronous": false
   }
 }
 ```
 
-The updated site metadata is returned so you can make sure it's correct.
+The updated rule definition is returned, so you can make sure it's correct.
 
 ## Get rule definition by id
 The rule definition can be fetched using the rule id with the following endpoint.
@@ -443,7 +600,7 @@ identifier for a rule set. The alias `-default-` can be used to refer to the onl
 no support for multiple rule sets linked to a single folder, and the behaviour of `-default-` is not defined in this case.
 The `ruleId` is the identifier of the rule.
 
-In the following example we are getting the rule definintion for a rule with the id `34cbe98b-1755-4161-87f5-6083044e0843` 
+In the following example we are getting the rule definition for a rule with the id `34cbe98b-1755-4161-87f5-6083044e0843` 
 contained in a folder with the Alfresco Node ID `1cfa1e0b-ee26-44c1-b092-8c04d684a16d`:
 
 ```bash
