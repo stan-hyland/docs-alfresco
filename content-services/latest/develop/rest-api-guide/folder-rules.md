@@ -413,7 +413,7 @@ curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' -
 The response contains the `id` for the new rule definition (i.e. "799d25bf-a41d-401a-8e9b-ac5b6c256dfd"). This id can be 
 used later on to get the rule definition.
 
-## Update a rule definition
+## Update a rule definition {#update-rule}
 Updating the definition for an Alfresco folder rule. This endpoint can be used to update the definition of the rule.
 
 **API Explorer URL:** [http://localhost:8080/api-explorer/#/rules/updateRule](http://localhost:8080/api-explorer/#/rules/updateRule){:target="_blank"}
@@ -657,3 +657,68 @@ $ curl -X GET -H 'Accept: application/json' -H 'Authorization: Basic VElDS0VUXzA
 ```
 
 The above response shows the definition of the rule. 
+
+## Delete a rule
+Deleting a rule definition from a folder. 
+
+>**Note:** You can also just update the `isEnabled` property and set it to `false` if there is a possibility that you 
+>might want to use the rule again in the future. See [update rule](#update-rule).
+
+**API Explorer URL:** [http://localhost:8080/api-explorer/#/rules/deleteRule](http://localhost:8080/api-explorer/#/rules/deleteRule){:target="_blank"}
+
+To delete a rule from a folder use the following DELETE call:
+
+`http://localhost:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/{id}/rule-sets/{ruleSetId}/rules/{ruleId}`
+
+The `{id}` part can be any of the constants `-root-`, `-my-`, `-shared-` or an Alfresco Node Identifier
+(e.g. d8f561cc-e208-4c63-a316-1ea3d3a4e10e) for the folder that contains the rule. The `ruleSetId` parameter is the
+identifier for a rule set. The alias `-default-` can be used to refer to the only rule set on a folder. There's currently
+no support for multiple rule sets linked to a single folder, and the behaviour of `-default-` is not defined in this case.
+The `ruleId` is the identifier for the rule that should be deleted.
+
+In the following example we are deleting a rule with the id `34cbe98b-1755-4161-87f5-6083044e0843` contained in a folder 
+with the Alfresco Node ID `1cfa1e0b-ee26-44c1-b092-8c04d684a16d`:
+
+```bash
+$ curl -X DELETE -H 'Accept: application/json' -H 'Authorization: Basic VElDS0VUX2JmMmVjZjg2N2MxYWU4MzQ4MzhhZWI3ZWU0ZTkyYTNjNGMxYTgxY2U=' 'http://localhost:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/5525510a-f188-40c7-9ca5-5cba6e6d41f3/rule-sets/-default-/rules/263bdbc9-44cc-46c8-897d-886ad920fd06' | jq
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+```
+
+## Execute existing rules
+Rules are only executed (i.e. run) when content is created, uploaded, updated, or deleted from a folder. However, sometimes 
+you create a rule, and you want it applied to all the content that already exists in the folder. This endpoint can be 
+used for that. 
+
+**API Explorer URL:** [http://localhost:8080/api-explorer/#/rules/executeRules](http://localhost:8080/api-explorer/#/rules/executeRules){:target="_blank"}
+
+To execute the rules contained in a folder use the following POST call:
+
+`http://localhost:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/{id}/rule-executions`
+
+The `{id}` part can be any of the constants `-root-`, `-my-`, `-shared-` or an Alfresco Node Identifier
+(e.g. d8f561cc-e208-4c63-a316-1ea3d3a4e10e) for the folder that contains the rules. 
+
+The body for a rules execution call looks like this:
+
+```json
+{
+  "isEachSubFolderIncluded": false
+}
+```
+
+There are one property you can set that controls the execution of the rules:
+
+* `isEachSubFolderIncluded`: this property controls if sub-folder rule definitions should be included in the rule execution. 
+  Default is `false` and any rules defined in sub-folders will not be executed. If rules defined in sub-folders should be 
+  executed as part of this call set this property to `true`.
+  
+In the following example we are executing any rule defined in a folder with the Alfresco Node ID 
+`5525510a-f188-40c7-9ca5-5cba6e6d41f3`, but not rules contained in sub-folders:
+
+```bash
+$ curl -X POST -H 'Content-Type: application/json' -H 'Accept: application/json' --header 'Authorization: Basic VElDS0VUX2JmMmVjZjg2N2MxYWU4MzQ4MzhhZWI3ZWU0ZTkyYTNjNGMxYTgxY2U=' -d '{"isEachSubFolderIncluded":false}' 'http://localhost:8080/alfresco/api/-default-/public/alfresco/versions/1/nodes/5525510a-f188-40c7-9ca5-5cba6e6d41f3/rule-executions'
+{"entry":{"isEachSubFolderIncluded":false}}
+```
+
