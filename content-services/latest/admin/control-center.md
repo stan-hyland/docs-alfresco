@@ -26,8 +26,8 @@ There are a number of software requirements for installing the Control Center. T
 The images downloaded directly from [Docker Hub](https://hub.docker.com/u/alfresco/){:target="_blank"}, or [Quay.io](https://quay.io/){:target="_blank"} are for a limited trial of the Enterprise version of Content Services that goes into read-only mode after 2 days. For a longer (30-day) trial, get the Alfresco Content Services [Download Trial](https://www.alfresco.com/platform/content-services-ecm/trial/download){:target="_blank"}.
 
 > **Note:** A [Quay.io](https://quay.io/){:target="_blank"} account is needed to pull the Docker images that are needed:
->
-> * `quay.io/alfresco/alfresco-admin-app`
+
+`quay.io/alfresco/alfresco-control-center`
 
 > **Note:** Alfresco customers can request Quay.io credentials by logging a support ticket via [Hyland Community](https://community.hyland.com//){:target="_blank"}. These credentials are required to pull private (Enterprise-only) Docker images from Quay.io.
 
