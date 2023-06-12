@@ -70,7 +70,7 @@ You can encrypt sensitive properties in the `activiti-app.properties`, `activiti
     If, for example, you are using Tomcat on Unix then you could include a shell script called `setenv.sh` in tomcat_home/bin with the following content:
 
     ```text
-    export JAVA_OPTS="$JAVA_OPTS -Djasypt.encryptor.password=secretpassword -Djasypt.encryptor.algorithm=PBEWITHSHA1ANDDESEDE"
+    export JAVA_OPTS="$JAVA_OPTS -Djasypt.encryptor.password=secretpassword -Djasypt.encryptor.algorithm=PBEWITHSHA1ANDDESEDE -Djasypt.encryptor.iv-generator-classname=org.jasypt.iv.NoIvGenerator"
     ```
 
     This assumes that your password is `secretpassword` and you are using the algorithm `PBEWITHSHA1ANDDESEDE`. The configuration could alternatively be done in `startup.sh`.
